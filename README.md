@@ -23,6 +23,8 @@ assuming that the location of the "adapter.py" file is "/home/pocketnc/adapter.p
 
 Next time when the PocketNC is restarted, the adapter will be running as a service behind the scenes.
 
+For implementation of the MTConnect agent, the steps are clearly defined on the MTConnect agent github repository (https://github.com/mtconnect/mtconnect-agent). The "PocketNC.xml" can be used as device file for the MTConnect agent.
+
 Verification
 ------------
 
