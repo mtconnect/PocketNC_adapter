@@ -39,8 +39,7 @@ Set the Connection Type to Telnet and click on Open.
 
 You should see data appearing in the following (SHDR) format:
 
-`2014-01-16T04:13:38.704Z|Xabs|52.83
-2014-01-16T04:13:38.704Z|Yabs|-14`
+`2014-01-16T04:13:38.704Z|Xabs|52.83|Yabs|-14`
 
 DataItems
 ---------
