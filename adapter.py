@@ -2,7 +2,7 @@ from thread import start_new_thread
 import socket
 import sys, time, linuxcnc, datetime
 HOST = ''
-PORT = 7711
+PORT = 7878
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
