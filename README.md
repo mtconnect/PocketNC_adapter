@@ -65,5 +65,5 @@ Following Data Items have been included in the adapter:
 
 MTConnect
 ---------
-For more information on MTConnect standard and data items included within the standard please visit
+For more information on the MTConnect standard and the dataitems included within the standard please visit
 http://www.mtconnect.org/
