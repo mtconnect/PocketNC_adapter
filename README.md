@@ -3,7 +3,7 @@ An implementation of the PocketNC adapter.
 
 Introduction
 ------------
-A python adapter "adapter.py" for PocketNC is shared which provides an interface for the PocketNC to become MTConnect compliant. The adapter allows the use of MTConnect agent to make the PocketNC MTconnect compliant. The steps to install and implement MTConnect agent can be found at https://github.com/mtconnect/mtconnect-agent.
+A python adapter "adapter.py" for PocketNC is shared which provides an interface for the PocketNC to become MTConnect compliant. The adapter allows the use of MTConnect agent to make the PocketNC MTconnect compliant. The steps to install and implement MTConnect agent can be found at https://github.com/mtconnect/mtconnect-agent. This adapter was developed and tested on a PocketNC v1.
 
 Implementation
 --------------
@@ -69,3 +69,8 @@ MTConnect
 ---------
 For more information on the MTConnect standard and the dataitems included within the standard please visit
 http://www.mtconnect.org/
+
+PocketNC
+---------
+The PocketNC is a desktop 5-axis CNC mill. This project is not affiliated with the PocketNC Company. Please visit
+http://www.pocketnc.com/
