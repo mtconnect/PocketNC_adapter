@@ -70,7 +70,7 @@ def new_client(conn):
                     ct2=datetime.datetime.now()
                 else:
                     ct1=datetime.datetime.now()
-                if (ex=='|exec|ACTIVE' or ex=='|exec|STOPPED' or ex=='|exec|INTERRUPTED') and estop=='|estop|ARMED':
+                if (ex=='|exec|ACTIVE' or ex=='|exec|STOPPED' or ex=='|exec|INTERRUPTED' or float(Srpm.split('|')[-1])>0) and estop=='|estop|ARMED':
                     at2=datetime.datetime.now()
                 else:
                     at1=datetime.datetime.now()
@@ -214,7 +214,7 @@ def new_client(conn):
                         ct=float(0)
 
                 #accumulated time:auto time
-                if (at2!='initialize' and ex=='|exec|ACTIVE' or ex=='|exec|INTERRUPTED' or ex=='|exec|STOPPED') and estop=='|estop|ARMED':
+                if (at2!='initialize' and ex=='|exec|ACTIVE' or ex=='|exec|INTERRUPTED' or ex=='|exec|STOPPED' or float(Srpm.split('|')[-1])>0) and estop=='|estop|ARMED':
                     if (at2-at1).total_seconds()>=0:
                         at+=(at2-at1).total_seconds()
                     at1=at2
