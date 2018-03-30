@@ -7,7 +7,7 @@ A python adapter "adapter.py" for PocketNC is shared which provides an interface
 
 Implementation
 --------------
-Download the "adapter.py" in the beaglebone black Debian OS of PocketNC. update the port information in the "adapter.py" to the port number available on your device.
+Download the files in the beaglebone black Debian OS of PocketNC. update the port information in the "adapter.py" to the port number available on your device.
 
 `PORT = 7878`
 
@@ -24,22 +24,6 @@ assuming that the location of the "adapter.py" file is "/home/pocketnc/adapter.p
 Next time when the PocketNC is restarted, the adapter will be running as a service behind the scenes.
 
 For implementation of the MTConnect agent, the steps are clearly defined on the MTConnect agent github repository (https://github.com/mtconnect/mtconnect-agent). The "PocketNC.xml" can be used as device file for the MTConnect agent.
-
-Verification
-------------
-
-One way to verify from a Windows OS whether the data is being pushed out of the PocketNC, is using Putty.
-
-Putty can be downloaded from "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html"
-
-Once Putty is installed on the Windows system. Open Putty.exe.
-
-Enter the IP address of the PocketNC as the Host Name and the Port initially set in the "adapter.py".
-Set the Connection Type to Telnet and click on Open.
-
-You should see data appearing in the following (SHDR) format:
-
-`2014-01-16T04:13:38.704Z|Xabs|52.83|Yabs|-14`
 
 DataItems
 ---------
