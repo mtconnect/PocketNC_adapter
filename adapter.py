@@ -174,7 +174,7 @@ class pocketNCAdapter(object):
                 self.adapter.begin_gather()
                 self.Srpm.set_value(ssp)
 
-                ln=str(data.current_line)
+                ln=str(data.motion_line)
                 self.adapter.begin_gather()
                 self.line.set_value(ln)
 
