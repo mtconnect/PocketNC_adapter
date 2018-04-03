@@ -120,113 +120,80 @@ class pocketNCAdapter(object):
                 else:
                     ex=''
 
-                if ex and ex!=self._exec.value():
-                    self.adapter.begin_gather()
-                    self._exec.set_value(ex)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self._exec.set_value(ex)
+                self.adapter.complete_gather()
 
                 if data.estop!=1:
                     estp='ARMED'
                 else:
                     estp='TRIGGERED'
 
-                if estp!=self.estop.value():
-                    self.adapter.begin_gather()
-                    self.estop.set_value(estp)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.estop.set_value(estp)
+                self.adapter.complete_gather()
 
-                pwr='ON'
-                if pwr!=self.power.value():
-                    self.adapter.begin_gather()
-                    self.power.set_value(pwr)
-                    self.adapter.complete_gather()
+
+                self.adapter.begin_gather()
+                self.power.set_value(pwr)
+                self.adapter.complete_gather()
 
                 xps=str(format(data.actual_position[0], '.4f'))
-                if self.Xabs.value()!=None and float(xps.split('|')[-1])!=float(self.Xabs.value()):
-                    self.adapter.begin_gather()
-                    self.Xabs.set_value(xps)
-                    self.adapter.complete_gather()
-                elif self.Xabs.value()==None:
-                    self.adapter.begin_gather()
-                    self.Xabs.set_value(xps)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.Xabs.set_value(xps)
+                self.adapter.complete_gather()
+
 
                 yps=str(format(data.actual_position[1], '.4f'))
-                if self.Yabs.value()!=None and float(yps.split('|')[-1])!=float(self.Yabs.value()):
-                    self.adapter.begin_gather()
-                    self.Yabs.set_value(yps)
-                    self.adapter.complete_gather()
-                elif self.Yabs.value()==None:
-                    self.adapter.begin_gather()
-                    self.Yabs.set_value(yps)
-                    self.adapter.complete_gather()
+
+                self.adapter.begin_gather()
+                self.Yabs.set_value(yps)
+                self.adapter.complete_gather()
+
 
 
                 zps=str(format(data.actual_position[2], '.4f'))
-                if self.Zabs.value()!=None and float(zps.split('|')[-1])!=float(self.Zabs.value()):
-                    self.adapter.begin_gather()
-                    self.Zabs.set_value(zps)
-                    self.adapter.complete_gather()
-                elif self.Zabs.value()==None:
-                    self.adapter.begin_gather()
-                    self.Zabs.set_value(zps)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.Zabs.set_value(zps)
+                self.adapter.complete_gather()
 
                 abs=str(format(data.actual_position[3], '.4f'))
-                if self.Aabs.value()!=None and float(abs.split('|')[-1])!=float(self.Aabs.value()):
-                    self.adapter.begin_gather()
-                    self.Aabs.set_value(abs)
-                    self.adapter.complete_gather()
-                elif self.Aabs.value()==None:
-                    self.adapter.begin_gather()
-                    self.Aabs.set_value(abs)
-                    self.adapter.complete_gather()
+
+                self.adapter.begin_gather()
+                self.Aabs.set_value(abs)
+                self.adapter.complete_gather()
 
                 bbs=str(format(data.actual_position[4], '.4f'))
-                if self.Babs.value()!=None and float(bbs.split('|')[-1])!=float(self.Babs.value()):
-                    self.adapter.begin_gather()
-                    self.Babs.set_value(bbs)
-                    self.adapter.complete_gather()
-                elif self.Babs.value()==None:
-                    self.adapter.begin_gather()
-                    self.Babs.set_value(bbs)
-                    self.adapter.complete_gather()
+
+                self.adapter.begin_gather()
+                self.Babs.set_value(bbs)
+                self.adapter.complete_gather()
+
 
                 ssp=str(data.spindle_speed)
-                if self.Srpm.value()!=ssp:
-                    self.adapter.begin_gather()
-                    self.Srpm.set_value(ssp)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.Srpm.set_value(ssp)
 
                 ln=str(data.current_line)
-                if self.line.value()!=ln:
-                    self.adapter.begin_gather()
-                    self.line.set_value(ln)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.line.set_value(ln)
 
                 pgm=str(data.file)
-                if self.program.value()!=pgm:
-                    self.adapter.begin_gather()
-                    self.program.set_value(pgm)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.program.set_value(pgm)
 
                 pfo=str(data.feedrate*100)
-                if pfo!=self.Fovr.value():
-                    self.adapter.begin_gather()
-                    self.Fovr.set_value(pfo)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.Fovr.set_value(pfo)
 
                 so=str(data.spindlerate*100)
-                if self.Sovr.value()!=so:
-                    self.adapter.begin_gather()
-                    self.Sovr.set_value(so)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.Sovr.set_value(so)
 
                 tooln=str(data.tool_in_spindle)
-                if self.Tool_number.value()!=tooln:
-                    self.adapter.begin_gather()
-                    self.Tool_number.set_value(tooln)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.Tool_number.set_value(tooln)
+                self.adapter.complete_gather()
 
                 if data.task_mode==1:
                     md='MDI'
@@ -237,10 +204,9 @@ class pocketNCAdapter(object):
                 else:
                     md=''
 
-                if md and md!=self.mode.value():
-                    self.adapter.begin_gather()
-                    self.mode.set_value(md)
-                    self.adapter.complete_gather()
+                self.adapter.begin_gather()
+                self.mode.set_value(md)
+                self.adapter.complete_gather()
 
                 #time finalization: accumulated time, cut vs auto vs total
                 if ylt2!='initialize' and self.power.value()=='ON' and ylt1!=ylt2:
