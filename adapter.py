@@ -137,44 +137,26 @@ class pocketNCAdapter(object):
                 self.adapter.begin_gather()
                 self.power.set_value(pwr)
                 self.adapter.complete_gather()
-
+                
+                self.adapter.begin_gather()
                 xps=str(format(data.actual_position[0], '.4f'))
-                self.adapter.begin_gather()
                 self.Xabs.set_value(xps)
-                self.adapter.complete_gather()
-
-
                 yps=str(format(data.actual_position[1], '.4f'))
-
-                self.adapter.begin_gather()
                 self.Yabs.set_value(yps)
-                self.adapter.complete_gather()
-
-
-
                 zps=str(format(data.actual_position[2], '.4f'))
-                self.adapter.begin_gather()
                 self.Zabs.set_value(zps)
-                self.adapter.complete_gather()
-
                 abs=str(format(data.actual_position[3], '.4f'))
-
-                self.adapter.begin_gather()
                 self.Aabs.set_value(abs)
-                self.adapter.complete_gather()
-
                 bbs=str(format(data.actual_position[4], '.4f'))
-
-                self.adapter.begin_gather()
                 self.Babs.set_value(bbs)
-                self.adapter.complete_gather()
 
+                self.adapter.complete_gather()
 
                 ssp=str(data.spindle_speed)
                 self.adapter.begin_gather()
                 self.Srpm.set_value(ssp)
 
-                ln=str(data.current_line)
+                ln=str(data.motion_line)
                 self.adapter.begin_gather()
                 self.line.set_value(ln)
 
