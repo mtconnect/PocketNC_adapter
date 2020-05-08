@@ -3,7 +3,7 @@ An implementation of the PocketNC adapter.
 
 Introduction
 ------------
-A python adapter "adapter.py" for PocketNC is shared which provides an interface for the PocketNC to become MTConnect compliant. The adapter allows the use of MTConnect agent to make the PocketNC MTconnect compliant. The steps to install and implement MTConnect agent can be found at https://github.com/mtconnect/mtconnect-agent. This adapter was developed and tested on a PocketNC v1.
+A python adapter "adapter.py" for PocketNC is shared which provides an interface for the PocketNC to become MTConnect compliant. The adapter allows the use of MTConnect agent to make the PocketNC MTconnect compliant. The steps to install and implement MTConnect agent can be found at https://github.com/mtconnect/cppagent. This adapter was developed and tested on a PocketNC v1.
 
 Implementation
 --------------
@@ -23,7 +23,7 @@ assuming that the location of the "adapter.py" file is "/home/pocketnc/adapter.p
 
 Next time when the PocketNC is restarted, the adapter will be running as a service behind the scenes.
 
-For implementation of the MTConnect agent, the steps are clearly defined on the MTConnect agent github repository (https://github.com/mtconnect/mtconnect-agent). The "PocketNC.xml" can be used as device file for the MTConnect agent.
+For implementation of the MTConnect agent, the steps are clearly defined on the MTConnect agent github repository (https://github.com/mtconnect/cppagent). The "PocketNC.xml" can be used as device file for the MTConnect agent.
 
 DataItems
 ---------
