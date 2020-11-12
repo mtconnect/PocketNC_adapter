@@ -135,7 +135,7 @@ class pocketNCAdapter(object):
 
 
                 self.adapter.begin_gather()
-                self.power.set_value(pwr)
+                #self.power.set_value(pwr)  #Not sure why this is not defined...
                 self.adapter.complete_gather()
                 
                 self.adapter.begin_gather()
